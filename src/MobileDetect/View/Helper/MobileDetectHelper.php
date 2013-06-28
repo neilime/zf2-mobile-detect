@@ -8,10 +8,16 @@ class MobileDetectHelper extends \Zend\View\Helper\AbstractHelper implements \Ze
 
     /**
      * Retrieve Mobile-detect service
+	 * @param \Zend\Http\Headers $oHeaders
      * @return \Mobile_Detect
      */
-    public function __invoke(){
-    	return $this->getServiceLocator()->getServiceLocator()->get('MobileDetect');
+    public function __invoke(\Zend\Http\Headers $oHeaders = null){
+    	$oMobileDetect = $this->getServiceLocator()->getServiceLocator()->get('MobileDetect');
+    	if($oHeaders){
+    		$oMobileDetect->setHttpHeaders($oHeaders->toArray());
+    		$oMobileDetect->setUserAgent($oHeaders->get('user-agent')->getFieldValue());
+    	}
+    	return $oMobileDetect;
     }
 
     /**
