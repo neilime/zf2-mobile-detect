@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="Bootstrap.php"
+         colors="true"
+         verbose="true"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Neilime\MobileDetectTest">
+            <directory suffix=".php">./MobileDetectTest/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../src/</directory>
+            <file>../Module.php</file>
+        </whitelist>
+    </filter>
+    <logging>
+		<log type="coverage-clover" target="./clover.xml"/>
+	</logging>
+</phpunit>

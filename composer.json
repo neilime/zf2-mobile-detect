@@ -1,0 +1,34 @@
+{
+    "name": "neilime/zf2-mobile-detect",
+    "type": "library",
+    "description": "Zend Framework 2 module that provides Mobile-Detect features",
+    "keywords": ["Zend Framework 2","mobile", "mobile detect","Mobile-Detect"],
+    "homepage": "http://neilime.github.io/zf2-mobile-detect/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Neilime",
+            "homepage": "https://github.com/neilime",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/neilime/zf2-mobile-detect/issues"
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*@stable",
+        "mobiledetect/mobiledetectlib": "2.*@stable"
+    },
+    "autoload": {
+        "psr-0": {
+            "Neilime\\MobileDetect": "src"
+        },
+        "classmap" : ["Module.php"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
