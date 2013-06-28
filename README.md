@@ -61,9 +61,19 @@ Installation
     
 # How to use _ZF2 Mobile-Detect_
 
-__ZF2 Mobile-Detect__ module provides helper for views and plugin controllers
+__ZF2 Mobile-Detect__ module provides Mobile_Detect class as a service, helper for views and plugin controllers
 
-1. Call Mobile-Detect in a controller
+1. Call Mobile-Detect with the service manager
+
+	```php
+	
+	/* @var $serviceManager \Zend\ServiceManager\ServiceLocatorInterface */	
+	
+   	$mobileDetect = $serviceManager->get('MobileDetect'); //Retrieve "\Mobile_Detect" object
+   	$mobileDetect->->isMobile();
+   	```
+
+2. Call Mobile-Detect in a controller
 
  	```php
    	$mobileDetect = $this->mobileDetect(); //Retrieve "\Mobile_Detect" object
@@ -75,7 +85,7 @@ __ZF2 Mobile-Detect__ module provides helper for views and plugin controllers
    	$mobileDetect->->isAndroidOS();   	
     ```
     
-2. Call Mobile-Detect in a view
+3. Call Mobile-Detect in a view
 
  	```php
    	$mobileDetect = $this->mobileDetect(); //Retrieve "\Mobile_Detect" object
