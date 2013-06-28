@@ -53,7 +53,7 @@ Installation
     return array(
         'modules' => array(
             // ...
-            'MobileDetect',
+            'Neilime\MobileDetect',
         ),
         // ...
     );
