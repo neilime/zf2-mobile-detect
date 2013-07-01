@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Zend Framework 2 module that provides Mobile-Detect features",
     "keywords": ["Zend Framework 2","mobile", "mobile detect","Mobile-Detect"],
-    "homepage": "http://neilime.github.io/zf2-mobile-detect/",
+    "homepage": "https://github.com/neilime/zf2-mobile-detect",
     "license": "MIT",
     "authors": [
         {
