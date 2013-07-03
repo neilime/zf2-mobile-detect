@@ -70,29 +70,29 @@ __ZF2 Mobile-Detect__ module provides Mobile_Detect class as a service, helper f
 	/* @var $serviceManager \Zend\ServiceManager\ServiceLocatorInterface */	
 	
    	$mobileDetect = $serviceManager->get('MobileDetect'); //Retrieve "\Mobile_Detect" object
-   	$mobileDetect->->isMobile();
+   	$mobileDetect->isMobile();
    	```
 
 2. Call Mobile-Detect in a controller
 
  	```php
    	$mobileDetect = $this->mobileDetect(); //Retrieve "\Mobile_Detect" object
-   	$mobileDetect->->isMobile();
+   	$mobileDetect->isMobile();
    	
    	$mobileDetect = $this->mobileDetect(
    		\Zend\Http\Headers::fromString('User-Agent: Mozilla/5.0 (Linux; Android 4.0.4; Desire HD Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19')
    	); //Retrieve "\Mobile_Detect" object with arbitrary http headers
-   	$mobileDetect->->isAndroidOS();   	
+   	$mobileDetect->isAndroidOS();   	
     ```
     
 3. Call Mobile-Detect in a view
 
  	```php
    	$mobileDetect = $this->mobileDetect(); //Retrieve "\Mobile_Detect" object
-   	$mobileDetect->->isMobile();
+   	$mobileDetect->isMobile();
    	   	
    	$mobileDetect = $this->mobileDetect(
    		\Zend\Http\Headers::fromString('User-Agent: Mozilla/5.0 (Linux; Android 4.0.4; Desire HD Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19')
    	); //Retrieve "\Mobile_Detect" object with arbitrary http headers
-   	$mobileDetect->->isAndroidOS();
+   	$mobileDetect->isAndroidOS();
    	```
