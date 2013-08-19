@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Zf2-mobile-detect by neilime</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/neilime/zf2-mobile-detect">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/neilime/zf2-mobile-detect/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/neilime/zf2-mobile-detect/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Zf2-mobile-detect</h1>
+          <p>ZF2 Mobile-Detect is a Zend Framework 2 module that provides Mobile-Detect features</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/neilime">neilime</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="zf2-mobile-detect-v10" class="anchor" href="#zf2-mobile-detect-v10"><span class="octicon octicon-link"></span></a>ZF2 Mobile-Detect, v1.0</h1>
+
+<p><a href="https://travis-ci.org/neilime/zf2-mobile-detect"><img src="https://travis-ci.org/neilime/zf2-mobile-detect.png?branch=master" alt="Build Status"></a>
+<a href="https://packagist.org/packages/neilime/zf2-mobile-detect"><img src="https://poser.pugx.org/neilime/zf2-mobile-detect/v/stable.png" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/neilime/zf2-mobile-detect"><img src="https://poser.pugx.org/neilime/zf2-mobile-detect/downloads.png" alt="Total Downloads"></a>
+<img src="https://raw.github.com/zf2-boiler-app/app-test/master/ressources/100%25-code-coverage.png" alt="Code coverage" title="100% code coverage"></p>
+
+<p>NOTE : If you want to contribute don't hesitate, I'll review any PR.</p>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>ZF2 Mobile-Detect is a Zend Framework 2 module that provides <a href="https://github.com/serbanghita/Mobile-Detect">Mobile-Detect</a> features.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>
+<a href="https://github.com/zendframework/zf2">Zend Framework 2</a> (latest master)</li>
+<li>
+<a href="https://github.com/serbanghita/Mobile-Detect">Mobile-Detect</a> (latest master).</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a name="main-setup" class="anchor" href="#main-setup"><span class="octicon octicon-link"></span></a>Main Setup</h3>
+
+<h4>
+<a name="by-cloning-project" class="anchor" href="#by-cloning-project"><span class="octicon octicon-link"></span></a>By cloning project</h4>
+
+<ol>
+<li>Install <a href="https://github.com/serbanghita/Mobile-Detect">Mobile-Detect</a> by cloning it into <code>./vendor/</code>.</li>
+<li>Clone this project into your <code>./vendor/</code> directory.</li>
+</ol><h4>
+<a name="with-composer" class="anchor" href="#with-composer"><span class="octicon octicon-link"></span></a>With composer</h4>
+
+<ol>
+<li>
+<p>Add this project in your composer.json:</p>
+
+<div class="highlight"><pre><span class="s2">"require"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">"neilime/zf2-mobile-detect"</span><span class="p">:</span> <span class="s2">"dev-master"</span>
+<span class="p">}</span>
+</pre></div>
+</li>
+<li>
+<p>Now tell composer to download <strong>ZF2 Mobile-Detect</strong> by running the command:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>php composer.phar update
+</pre></div>
+</li>
+</ol><h4>
+<a name="post-installation" class="anchor" href="#post-installation"><span class="octicon octicon-link"></span></a>Post installation</h4>
+
+<ol>
+<li>
+<p>Enabling it in your <code>application.config.php</code>file.</p>
+
+<div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">'modules'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="s1">'Neilime\MobileDetect'</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="c1">// ...</span>
+<span class="p">);</span>
+</pre></div>
+</li>
+</ol><h1>
+<a name="how-to-use-zf2-mobile-detect" class="anchor" href="#how-to-use-zf2-mobile-detect"><span class="octicon octicon-link"></span></a>How to use <em>ZF2 Mobile-Detect</em>
+</h1>
+
+<p><strong>ZF2 Mobile-Detect</strong> module provides Mobile_Detect class as a service, helper for views and plugin controllers</p>
+
+<ol>
+<li>
+<p>Call Mobile-Detect with the service manager</p>
+
+<div class="highlight"><pre>
+<span class="cm">/* @var $serviceManager \Zend\ServiceManager\ServiceLocatorInterface */</span> 
+
+<span class="nv">$mobileDetect</span> <span class="o">=</span> <span class="nv">$serviceManager</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'MobileDetect'</span><span class="p">);</span> <span class="c1">//Retrieve "\Mobile_Detect" object</span>
+<span class="nv">$mobileDetect</span><span class="o">-&gt;</span><span class="na">isMobile</span><span class="p">();</span>
+</pre></div>
+</li>
+<li>
+<p>Call Mobile-Detect in a controller</p>
+
+<div class="highlight"><pre><span class="nv">$mobileDetect</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">mobileDetect</span><span class="p">();</span> <span class="c1">//Retrieve "\Mobile_Detect" object</span>
+<span class="nv">$mobileDetect</span><span class="o">-&gt;</span><span class="na">isMobile</span><span class="p">();</span>
+
+<span class="nv">$mobileDetect</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">mobileDetect</span><span class="p">(</span>
+    <span class="nx">\Zend\Http\Headers</span><span class="o">::</span><span class="na">fromString</span><span class="p">(</span><span class="s1">'User-Agent: Mozilla/5.0 (Linux; Android 4.0.4; Desire HD Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19'</span><span class="p">)</span>
+<span class="p">);</span> <span class="c1">//Retrieve "\Mobile_Detect" object with arbitrary http headers</span>
+<span class="nv">$mobileDetect</span><span class="o">-&gt;</span><span class="na">isAndroidOS</span><span class="p">();</span>       
+</pre></div>
+</li>
+<li>
+<p>Call Mobile-Detect in a view</p>
+
+<div class="highlight"><pre><span class="nv">$mobileDetect</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">mobileDetect</span><span class="p">();</span> <span class="c1">//Retrieve "\Mobile_Detect" object</span>
+<span class="nv">$mobileDetect</span><span class="o">-&gt;</span><span class="na">isMobile</span><span class="p">();</span>
+
+<span class="nv">$mobileDetect</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">mobileDetect</span><span class="p">(</span>
+    <span class="nx">\Zend\Http\Headers</span><span class="o">::</span><span class="na">fromString</span><span class="p">(</span><span class="s1">'User-Agent: Mozilla/5.0 (Linux; Android 4.0.4; Desire HD Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19'</span><span class="p">)</span>
+<span class="p">);</span> <span class="c1">//Retrieve "\Mobile_Detect" object with arbitrary http headers</span>
+<span class="nv">$mobileDetect</span><span class="o">-&gt;</span><span class="na">isAndroidOS</span><span class="p">();</span>
+</pre></div>
+</li>
+</ol>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
