@@ -8,6 +8,8 @@ ZF2 Mobile-Detect, v1.0
 
 NOTE : If you want to contribute don't hesitate, I'll review any PR.
 
+<a href='https://pledgie.com/campaigns/26799'><img alt='Click here to lend your support to: ZF2 Mobile-Detect and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/26799.png?skin_name=chrome' border='0' ></a>
+
 Introduction
 ------------
 
