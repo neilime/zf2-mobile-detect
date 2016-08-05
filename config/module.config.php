@@ -1,18 +1,18 @@
 <?php
-return array(
-	'service_manager' => array(
-        'factories' => array(
-            'MobileDetect' => 'Neilime\MobileDetect\Factory\MobileDetectFactory'
-        )
-    ),
-	'controller_plugins' => array(
-    	'invokables' => array(
-    		'MobileDetect' => 'Neilime\MobileDetect\Mvc\Controller\Plugin\MobileDetectPlugin'
-    	)
-    ),
-	'view_helpers' => array(
-		'invokables' => array(
-			'MobileDetect' => 'Neilime\MobileDetect\View\Helper\MobileDetectHelper'
-		)
-	)
-);
+return [
+    'service_manager'    => [
+        'factories' => [
+            'MobileDetect' => 'Neilime\MobileDetect\Factory\MobileDetectFactory',
+        ],
+    ],
+    'controller_plugins' => [
+        'factories' => [
+            'MobileDetect' => 'Neilime\MobileDetect\Mvc\Controller\Plugin\MobileDetectPluginFactory',
+        ],
+    ],
+    'view_helpers'       => [
+        'factories' => [
+            'MobileDetect' => 'Neilime\MobileDetect\View\Helper\MobileDetectHelperFactory',
+        ],
+    ],
+];
