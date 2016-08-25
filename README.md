@@ -50,17 +50,15 @@ Installation
 
 #### Post installation
 
-1. Enabling it in your `application.config.php`file.
+1. Enabling it in your `config/modules.config.php`file.
 
     ```php
     <?php
-    return array(
-        'modules' => array(
-            // ...
-            'Neilime\MobileDetect',
-        ),
+    return [
         // ...
-    );
+        'Neilime\MobileDetect',
+        // ...
+    ];
     ```
     
 # How to use _ZF3 Mobile-Detect_
