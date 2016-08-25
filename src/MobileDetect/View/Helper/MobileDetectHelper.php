@@ -1,7 +1,6 @@
 <?php
 namespace Neilime\MobileDetect\View\Helper;
 
-use Neilime\MobileDetect\Factory\MobileDetectFactory;
 use Zend\View\Helper\AbstractHelper;
 
 class MobileDetectHelper extends AbstractHelper

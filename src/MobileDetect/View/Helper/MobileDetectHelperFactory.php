@@ -1,15 +1,13 @@
 <?php
 namespace Neilime\MobileDetect\View\Helper;
 
-use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 class MobileDetectHelperFactory implements FactoryInterface
 {
-    public function createService(ServiceLocatorInterface $viewManager)
+    public function __invoke(ContainerInterface $serviceLocator, $requestedName, array $options = null)
     {
-        $serviceManager = $viewManager->getServiceLocator();
-
-        return new MobileDetectHelper($serviceManager->get('MobileDetect'));
+        return new MobileDetectHelper($serviceLocator->get('mobileDetect'));
     }
 }

@@ -17,8 +17,8 @@
     },
     "minimum-stability" : "stable",
     "require": {
-        "php": ">=5.3.3",
-        "zendframework/zendframework": "2.*@stable",
+        "php": ">=5.5",
+        "zendframework/zendframework": "^3.0",
         "mobiledetect/mobiledetectlib": "2.*@stable"
     },
     "autoload": {

@@ -1,4 +1,4 @@
-ZF2 Mobile-Detect, v1.0
+ZF3 Mobile-Detect, v1.0
 =======
 
 [![Build Status](https://travis-ci.org/neilime/zf2-mobile-detect.png?branch=master)](https://travis-ci.org/neilime/zf2-mobile-detect)
@@ -13,13 +13,13 @@ NOTE : If you want to contribute don't hesitate, I'll review any PR.
 Introduction
 ------------
 
-ZF2 Mobile-Detect is a Zend Framework 2 module that provides [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect) features.
+ZF3 Mobile-Detect is a Zend Framework 3 module that provides [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect) features.
 
 
 Requirements
 ------------
 
-* [Zend Framework 2](https://github.com/zendframework/zf2) (latest master)
+* [Zend Framework 3](https://github.com/zendframework/zf3) (latest master)
 * [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect) (latest master).
 
 Installation
@@ -38,11 +38,11 @@ Installation
 
     ```json
     "require": {
-        "neilime/zf2-mobile-detect": "dev-master"
+        "neilime/zf2-mobile-detect": "^2.0"
     }
     ```
 
-2. Now tell composer to download __ZF2 Mobile-Detect__ by running the command:
+2. Now tell composer to download __ZF3 Mobile-Detect__ by running the command:
 
     ```bash
     $ php composer.phar update
@@ -63,9 +63,9 @@ Installation
     );
     ```
     
-# How to use _ZF2 Mobile-Detect_
+# How to use _ZF3 Mobile-Detect_
 
-__ZF2 Mobile-Detect__ module provides Mobile_Detect class as a service, helper for views and plugin controllers
+__ZF3 Mobile-Detect__ module provides Mobile_Detect class as a service, helper for views and plugin controllers
 
 1. Call Mobile-Detect with the service manager
 

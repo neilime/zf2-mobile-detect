@@ -2,17 +2,22 @@
 return [
     'service_manager'    => [
         'factories' => [
-            'MobileDetect' => 'Neilime\MobileDetect\Factory\MobileDetectFactory',
+            'mobileDetect' => 'Neilime\MobileDetect\Factory\MobileDetectFactory',
         ],
     ],
     'controller_plugins' => [
         'factories' => [
-            'MobileDetect' => 'Neilime\MobileDetect\Mvc\Controller\Plugin\MobileDetectPluginFactory',
+            'mobileDetect' => 'Neilime\MobileDetect\Mvc\Controller\Plugin\MobileDetectPluginFactory',
         ],
     ],
     'view_helpers'       => [
         'factories' => [
-            'MobileDetect' => 'Neilime\MobileDetect\View\Helper\MobileDetectHelperFactory',
+            'mobileDetect' => 'Neilime\MobileDetect\View\Helper\MobileDetectHelperFactory',
+        ],
+    ],
+    'controllers'        => [
+        'abstract_factories' => [
+            \Zend\Mvc\Controller\LazyControllerAbstractFactory::class,
         ],
     ],
 ];

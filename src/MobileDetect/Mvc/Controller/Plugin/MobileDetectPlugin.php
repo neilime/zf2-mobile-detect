@@ -1,7 +1,6 @@
 <?php
 namespace Neilime\MobileDetect\Mvc\Controller\Plugin;
 
-use Neilime\MobileDetect\Factory\MobileDetectFactory;
 use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 class MobileDetectPlugin extends AbstractPlugin

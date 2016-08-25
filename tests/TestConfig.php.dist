@@ -1,6 +1,7 @@
 <?php
 return array(
     'modules' => array(
+        'Zend\Router',
         'Neilime\MobileDetect'
     ),
     'module_listener_options' => array(
