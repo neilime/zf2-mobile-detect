@@ -1,5 +1,4 @@
-ZF Mobile-Detect
-=======
+# ZF Mobile-Detect
 
 [![Build Status](https://travis-ci.org/neilime/zf2-mobile-detect.png?branch=master)](https://travis-ci.org/neilime/zf2-mobile-detect)
 [![Latest Stable Version](https://poser.pugx.org/neilime/zf2-mobile-detect/v/stable.png)](https://packagist.org/packages/neilime/zf2-mobile-detect)
@@ -9,35 +8,34 @@ NOTE : If you want to contribute don't hesitate, I'll review any PR.
 
 <a href='https://pledgie.com/campaigns/26799'><img alt='Click here to lend your support to: ZF Mobile-Detect and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/26799.png?skin_name=chrome' border='0' ></a>
 
-Introduction
-------------
+# Introduction
 
 ZF Mobile-Detect is a Zend Framework module that provides [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect) features.
 
+# Requirements
 
-Requirements
-------------
+Name | Version
+-----|--------
+[php](https://secure.php.net/) | >=5.3.3
+[zendframework/zend-mvc](https://github.com/zendframework/zend-mvc) | 3.*.*
+[mobiledetect/mobiledetectlib](https://github.com/serbanghita/Mobile-Detect) | 2.*.*
 
-* [Zend Framework](https://github.com/zendframework/zendframework)
-* [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect).
+# Installation
 
-Installation
-------------
+## Main Setup
 
-### Main Setup
-
-#### By cloning project
+### By cloning project
 
 1. Install [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect) by cloning it into `./vendor/`.
 2. Clone this project into your `./vendor/` directory.
 
-#### With composer
+### With composer
 
 1. Add this project in your composer.json:
 
     ```json
     "require": {
-        "neilime/zf2-mobile-detect": "^2.0"
+        "neilime/zf2-mobile-detect": "2.*.*"
     }
     ```
 
@@ -47,7 +45,7 @@ Installation
     $ php composer.phar update
     ```
 
-#### Post installation
+## Post installation
 
 1. Enabling it in your `config/modules.config.php`file.
 
