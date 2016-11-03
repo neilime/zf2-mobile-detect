@@ -2,5 +2,4 @@
 /.buildpath
 /.project
 /vendor
-/nbproject/private/
-/nbproject/
+/nbproject

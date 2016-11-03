@@ -17,13 +17,17 @@
     },
     "minimum-stability" : "stable",
     "require": {
-        "php": ">=5.3.3",
-        "zendframework/zendframework": "2.*@stable",
-        "mobiledetect/mobiledetectlib": "2.*@stable"
+        "php": ">=5.6",
+		"zendframework/zend-mvc": "3.*.*",
+        "mobiledetect/mobiledetectlib": "2.*.*"
+    },
+	"require-dev": {
+        "phpunit/phpunit": "4.*.*",
+		"zendframework/zend-test": "3.*.*"
     },
     "autoload": {
-        "psr-0": {
-            "Neilime\\MobileDetect": "src"
+        "psr-4": {
+            "Neilime\\MobileDetect\\": "src"
         },
         "classmap" : ["Module.php"]
     },

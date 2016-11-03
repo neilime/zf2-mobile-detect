@@ -34,8 +34,15 @@ class Bootstrap{
                 )
             )
         ),$aTestConfig);
-        static::$serviceManager = new \Zend\ServiceManager\ServiceManager(new \Zend\Mvc\Service\ServiceManagerConfig());
-        static::$serviceManager->setService('ApplicationConfig',static::$config)->get('ModuleManager')->loadModules();
+
+        $smConfig = new \Zend\Mvc\Service\ServiceManagerConfig(static::$config);
+
+        $serviceManager = new \Zend\ServiceManager\ServiceManager();
+        $smConfig->configureServiceManager($serviceManager);
+        $serviceManager->setService('ApplicationConfig', static::$config);
+        $serviceManager->get('ModuleManager')->loadModules();
+
+        static::$serviceManager = $serviceManager;
     }
 
     /**

@@ -1,45 +1,37 @@
 <?php
 namespace Neilime\MobileDetect\View\Helper;
-class MobileDetectHelper extends \Zend\View\Helper\AbstractHelper implements \Zend\ServiceManager\ServiceLocatorAwareInterface{
-	/**
-     * @var \Zend\ServiceManager\ServiceLocatorInterface
+
+use Zend\View\Helper\AbstractHelper;
+
+class MobileDetectHelper extends AbstractHelper
+{
+    /**
+     * @var \Mobile_Detect
      */
-    protected $serviceLocator = null;
+    protected $mobileDetect;
+
+    /**
+     * @param \Mobile_Detect $mobileDetect
+     */
+    public function __construct(\Mobile_Detect $mobileDetect)
+    {
+        $this->mobileDetect = $mobileDetect;
+    }
 
     /**
      * Retrieve Mobile-detect service
-	 * @param \Zend\Http\Headers $oHeaders
+     *
+     * @param \Zend\Http\Headers $oHeaders
+     *
      * @return \Mobile_Detect
      */
-    public function __invoke(\Zend\Http\Headers $oHeaders = null){
-    	$oMobileDetect = $this->getServiceLocator()->getServiceLocator()->get('MobileDetect');
-    	if($oHeaders){
-    		$oMobileDetect->setHttpHeaders($oHeaders->toArray());
-    		$oMobileDetect->setUserAgent($oHeaders->get('user-agent')->getFieldValue());
-    	}
-    	return $oMobileDetect;
-    }
+    public function __invoke(\Zend\Http\Headers $oHeaders = null)
+    {
+        if ($oHeaders) {
+            $this->mobileDetect->setHttpHeaders($oHeaders->toArray());
+            $this->mobileDetect->setUserAgent($oHeaders->get('user-agent')->getFieldValue());
+        }
 
-    /**
-     * Set service locator
-     * @see \Zend\ServiceManager\ServiceLocatorAwareInterface::setServiceLocator()
-     * @param \Zend\ServiceManager\ServiceLocatorInterface $oServiceLocator
-     * @return \Neilime\MobileDetect\View\Helper\MobileDetectHelper
-     */
-    public function setServiceLocator(\Zend\ServiceManager\ServiceLocatorInterface $oServiceLocator){
-        $this->serviceLocator = $oServiceLocator;
-        return $this;
+        return $this->mobileDetect;
     }
-
-    /**
-     * Get service locator
-     * @see \Zend\ServiceManager\ServiceLocatorAwareInterface::getServiceLocator()
-	 * @throws \LogicException
-     * @return \Zend\ServiceManager\ServiceLocatorInterface
-     */
-    public function getServiceLocator(){
-        if($this->serviceLocator instanceof \Zend\ServiceManager\ServiceLocatorInterface)return $this->serviceLocator;
-        throw new \LogicException('Service locator is undefined for MobileDetect view helper');
-    }
-
 }
