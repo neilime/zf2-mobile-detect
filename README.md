@@ -1,4 +1,4 @@
-ZF3 Mobile-Detect, v1.0
+ZF Mobile-Detect
 =======
 
 [![Build Status](https://travis-ci.org/neilime/zf2-mobile-detect.png?branch=master)](https://travis-ci.org/neilime/zf2-mobile-detect)
