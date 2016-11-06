@@ -1,21 +1,43 @@
 language: php
 
-php:
- - "5.6"
- - "7.0"
+matrix:
+  include:
+  - php: '5.6'
+  - php: '7.0'
+    env:
+    - EXECUTE_AFTER_SCRIPT=true
+
+addons:
+  apt:
+    packages:
+    - graphviz
+
+env:
+  global:
+  - secure: eTtVtFTk5+jdkUUIa9HWWTprwvq5y+mxeQ3AbJc54AcKyTtPE7H9ywgsVCEp+n0z9t12bW5bgsCTMvFny1Vq/yYb1SIMUu37kCGohrGc2fgFIqanVHnetNTRjj4h5zZxll9GsaA5GEd4Pnn/LMbAGdO8AehDhbz7DIY6ZLuIA74=
+
+sudo: false
+
+cache:
+  directories:
+  - "$HOME/.composer/cache"
 
 before_install:
-# Set the GitHub OAuth token to make use of the 6000 per hour rate limit
- - mkdir -p ~/.composer
- - cp .travis.composer.json ~/.composer/config.json
-# Update composer
- - composer self-update
-# Install project
- - composer install --dev -o
+- mkdir -p ~/.composer
+- cp .travis.composer.json ~/.composer/config.json
+- composer self-update
+- composer install --prefer-dist --dev
 
 before_script:
- - cd tests
- 
+- mkdir -p build/{logs,coverage,phpdoc}
+
 script:
- - phpunit -d max_execution_time=0 
- - php ./coverage-checker.php ./clover.xml 100
+- cd tests
+- phpunit -d max_execution_time=0 --coverage-text --coverage-clover ../build/logs/clover.xml
+  --coverage-html ../build/coverage/
+- cd ..
+
+after_script:
+- if [[ $EXECUTE_AFTER_SCRIPT == 'true' ]]; then php vendor/bin/coveralls --verbose --config;fi
+- if [[ $EXECUTE_AFTER_SCRIPT == 'true' ]]; then vendor/bin/phpdoc -d "./src" -t "./build/phpdoc" --template="responsive-twig";fi
+- if [[ $EXECUTE_AFTER_SCRIPT == 'true' ]]; then bash <(curl -s https://gist.githubusercontent.com/neilime/769d733c52acdecea8d2548fb3aca3ff/raw/853d54289f5c449ea9af6a4d8ca92e1f9fc80980/travis_ci_php_publish_build.sh);fi
