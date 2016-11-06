@@ -23,12 +23,13 @@ cache:
   - "$HOME/.composer/cache"
 
 before_install:
-- pear channel-discover pear.phpdoc.org
-- pear install phpdoc/phpDocumentor
 - mkdir -p ~/.composer
 - cp .travis.composer.json ~/.composer/config.json
 - composer self-update
 - composer install --prefer-dist --dev
+- pear channel-discover pear.phpdoc.org
+- pear install phpdoc/phpDocumentor
+- phpenv rehash
 
 before_script:
 - mkdir -p build/{logs,coverage,phpdoc}
