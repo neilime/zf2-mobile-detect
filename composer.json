@@ -18,12 +18,14 @@
     "minimum-stability" : "stable",
     "require": {
         "php": ">=5.6",
-		"zendframework/zend-mvc": "3.*.*",
+        "zendframework/zend-mvc": "3.*.*",
         "mobiledetect/mobiledetectlib": "2.*.*"
     },
-	"require-dev": {
+    "require-dev": {
+        "zendframework/zend-test": "3.*.*",
         "phpunit/phpunit": "4.*.*",
-		"zendframework/zend-test": "3.*.*"
+        "satooshi/php-coveralls": "1.*.*",
+        "phpdocumentor/phpdocumentor": "2.*.*"
     },
     "autoload": {
         "psr-4": {
