@@ -18,145 +18,119 @@
       <a href="https://github.com/neilime/zf2-mobile-detect/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
-    <section class="main-content">
-      <h1>
-<a id="zf-mobile-detect" class="anchor" href="#zf-mobile-detect" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ZF Mobile-Detect</h1>
+<section class="main-content">    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-assetsbundle---zend-framework-module" class="anchor" href="#assetsbundle---zend-framework-module" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AssetsBundle - Zend Framework module</h1>
 
-<p><a href="https://travis-ci.org/neilime/zf2-mobile-detect"><img src="https://travis-ci.org/neilime/zf2-mobile-detect.png?branch=master" alt="Build Status"></a>
-<a href="https://packagist.org/packages/neilime/zf2-mobile-detect"><img src="https://poser.pugx.org/neilime/zf2-mobile-detect/v/stable.png" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/neilime/zf2-mobile-detect"><img src="https://poser.pugx.org/neilime/zf2-mobile-detect/downloads.png" alt="Total Downloads"></a></p>
+<p><a href="https://travis-ci.org/neilime/zf2-assets-bundle"><img src="https://camo.githubusercontent.com/2d3a6ebb9868e33ee77829f36e7e63fc9134b406/68747470733a2f2f7472617669732d63692e6f72672f6e65696c696d652f7a66322d6173736574732d62756e646c652e706e673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/neilime/zf2-assets-bundle.png?branch=master" style="max-width:100%;"></a>
+<a href="https://packagist.org/packages/neilime/zf2-assets-bundle"><img src="https://camo.githubusercontent.com/e3202081f20eaaf689e4d36a43d0b2ebdf09069b/68747470733a2f2f706f7365722e707567782e6f72672f6e65696c696d652f7a66322d6173736574732d62756e646c652f762f737461626c652e706e67" alt="Latest Stable Version" data-canonical-src="https://poser.pugx.org/neilime/zf2-assets-bundle/v/stable.png" style="max-width:100%;"></a>
+<a href="https://packagist.org/packages/neilime/zf2-assets-bundle"><img src="https://camo.githubusercontent.com/d47f9a650d214032e58285818f14f20228dfb3a2/68747470733a2f2f706f7365722e707567782e6f72672f6e65696c696d652f7a66322d6173736574732d62756e646c652f646f776e6c6f6164732e706e67" alt="Total Downloads" data-canonical-src="https://poser.pugx.org/neilime/zf2-assets-bundle/downloads.png" style="max-width:100%;"></a></p>
 
-<p>NOTE : If you want to contribute don't hesitate, I'll review any PR.</p>
+<p><em>AssetsBundle</em> is a module for Zend Framework providing assets management (bundling &amp; caching) like Css, Js and Less, dependent on modules, controllers and actions .
+This module supports the concept of the "development/production" environment.</p>
 
-<p><a href="https://pledgie.com/campaigns/26799"><img alt="Click here to lend your support to: ZF Mobile-Detect and make a donation at pledgie.com !" src="https://pledgie.com/campaigns/26799.png?skin_name=chrome" border="0"></a></p>
+<p>In development :</p>
 
-<h1>
-<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h1>
+<ul>
+<li>Files are not bundled for easier debugging.</li>
+<li>Less files are compiled when updated or if an "@import" inside is updated</li>
+</ul>
 
-<p>ZF Mobile-Detect is a Zend Framework module that provides <a href="https://github.com/serbanghita/Mobile-Detect">Mobile-Detect</a> features.</p>
+<p>In production :</p>
 
-<h1>
-<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h1>
+<ul>
+<li>All files are bundled and cached once only if needed.</li>
+<li>Assets path are encrypted to mask file tree (with the exception of files in the "assets" directory)</li>
+</ul>
 
-<table>
-<thead>
+<h1><a id="user-content-helping-project" class="anchor" href="#helping-project" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Helping Project</h1>
+
+<p>If this project helps you reduce time to develop and/or you want to help the maintainer of this project, you can make a donation, thank you.</p>
+
+<p><a href="https://pledgie.com/campaigns/26668"><img alt="Click here to lend your support to: Zend Framework AssetsBundle and make a donation at pledgie.com !" src="https://camo.githubusercontent.com/8aa1ff95e8041ac0cccb89734e5e9239f2b7e71c/68747470733a2f2f706c65646769652e636f6d2f63616d706169676e732f32363636382e706e673f736b696e5f6e616d653d6368726f6d65" border="0" data-canonical-src="https://pledgie.com/campaigns/26668.png?skin_name=chrome" style="max-width:100%;"></a></p>
+
+<h1><a id="user-content-contributing" class="anchor" href="#contributing" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contributing</h1>
+
+<p>If you wish to contribute to TwbBundle, please read the <a href="/neilime/zf2-assets-bundle/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> file.
+NOTE : If you want to contribute don't hesitate, I'll review any PR.</p>
+
+<h1><a id="user-content-requirements" class="anchor" href="#requirements" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requirements</h1>
+
+<table><thead>
 <tr>
 <th>Name</th>
 <th>Version</th>
 </tr>
-</thead>
-<tbody>
+</thead><tbody>
 <tr>
 <td><a href="https://secure.php.net/">php</a></td>
 <td>&gt;=5.3.3</td>
 </tr>
 <tr>
-<td><a href="https://github.com/zendframework/zend-mvc">zendframework/zend-mvc</a></td>
-<td>3.<em>.</em>
-</td>
+<td><a href="https://github.com/zendframework/zend-eventmanager">zendframework/zend-eventmanager</a></td>
+<td>2.*</td>
 </tr>
 <tr>
-<td><a href="https://github.com/serbanghita/Mobile-Detect">mobiledetect/mobiledetectlib</a></td>
-<td>2.<em>.</em>
-</td>
+<td><a href="https://github.com/zendframework/zend-http">zendframework/zend-http</a></td>
+<td>2.*</td>
 </tr>
-</tbody>
-</table>
+<tr>
+<td><a href="https://github.com/zendframework/zend-mvc">zendframework/zend-mvc</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/zendframework/zend-modulemanager">zendframework/zend-modulemanager</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/zendframework/zend-config">zendframework/zend-config</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/zendframework/zend-console">zendframework/zend-console</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/zendframework/zend-view">zendframework/zend-view</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/zendframework/zend-serializer">zendframework/zend-serializer</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/zendframework/zend-log">zendframework/zend-log</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/zendframework/zend-i18n">zendframework/zend-i18n</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/oyejorge/less.php">oyejorge/less.php</a></td>
+<td>1.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mrclay/minify">mrclay/minify</a></td>
+<td>2.*</td>
+</tr>
+<tr>
+<td><a href="https://github.com/tedivm/jshrink">tedivm/jshrink</a></td>
+<td>1.*</td>
+</tr>
+</tbody></table>
 
-<h1>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h1>
-
-<h2>
-<a id="main-setup" class="anchor" href="#main-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Main Setup</h2>
-
-<h3>
-<a id="by-cloning-project" class="anchor" href="#by-cloning-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>By cloning project</h3>
-
-<ol>
-<li>Install <a href="https://github.com/serbanghita/Mobile-Detect">Mobile-Detect</a> by cloning it into <code>./vendor/</code>.</li>
-<li>Clone this project into your <code>./vendor/</code> directory.</li>
-</ol>
-
-<h3>
-<a id="with-composer" class="anchor" href="#with-composer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>With composer</h3>
-
-<ol>
-<li>
-<p>Add this project in your composer.json:</p>
-
-<div class="highlight highlight-source-json"><pre><span class="pl-s"><span class="pl-pds">"</span>require<span class="pl-pds">"</span></span>: {
-    <span class="pl-s"><span class="pl-pds">"</span>neilime/zf2-mobile-detect<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2.*.*<span class="pl-pds">"</span></span>
-}</pre></div>
-</li>
-<li>
-<p>Now tell composer to download <strong>ZF Mobile-Detect</strong> by running the command:</p>
-
-<div class="highlight highlight-source-shell"><pre>$ php composer.phar update</pre></div>
-</li>
-</ol>
-
-<h2>
-<a id="post-installation" class="anchor" href="#post-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Post installation</h2>
-
-<ol>
-<li>
-<p>Enabling it in your <code>config/modules.config.php</code>file.</p>
-
-<div class="highlight highlight-text-html-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span>
-<span class="pl-s1"><span class="pl-k">return</span> [</span>
-<span class="pl-s1">    <span class="pl-c">// ...</span></span>
-<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>Neilime\MobileDetect<span class="pl-pds">'</span></span>,</span>
-<span class="pl-s1">    <span class="pl-c">// ...</span></span>
-<span class="pl-s1">];</span></pre></div>
-</li>
-</ol>
-
-<h1>
-<a id="how-to-use-zf-mobile-detect" class="anchor" href="#how-to-use-zf-mobile-detect" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use <em>ZF Mobile-Detect</em>
-</h1>
-
-<p><strong>ZF Mobile-Detect</strong> module provides Mobile_Detect class as a service, helper for views and plugin controllers</p>
+<h1><a id="user-content-pages" class="anchor" href="#pages" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pages</h1>
 
 <ol>
-<li>
-<p>Call Mobile-Detect with the service manager</p>
-
-<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"></span>
-<span class="pl-s1"><span class="pl-c">/* @var $serviceManager \Zend\ServiceManager\ServiceLocatorInterface */</span></span>
-<span class="pl-s1"></span>
-<span class="pl-s1"><span class="pl-smi">$mobileDetect</span> <span class="pl-k">=</span> <span class="pl-smi">$serviceManager</span><span class="pl-k">-&gt;</span>get(<span class="pl-s"><span class="pl-pds">'</span>MobileDetect<span class="pl-pds">'</span></span>); <span class="pl-c">//Retrieve "\Mobile_Detect" object</span></span>
-<span class="pl-s1"><span class="pl-smi">$mobileDetect</span><span class="pl-k">-&gt;</span>isMobile();</span></pre></div>
-</li>
-<li>
-<p>Call Mobile-Detect in a controller</p>
-
-<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-smi">$mobileDetect</span> <span class="pl-k">=</span> <span class="pl-smi">$this</span><span class="pl-k">-&gt;</span>mobileDetect(); <span class="pl-c">//Retrieve "\Mobile_Detect" object</span></span>
-<span class="pl-s1"><span class="pl-smi">$mobileDetect</span><span class="pl-k">-&gt;</span>isMobile();</span>
-<span class="pl-s1"></span>
-<span class="pl-s1"><span class="pl-smi">$mobileDetect</span> <span class="pl-k">=</span> <span class="pl-smi">$this</span><span class="pl-k">-&gt;</span>mobileDetect(</span>
-<span class="pl-s1">    <span class="pl-c1">\Zend\Http\</span><span class="pl-c1">Headers</span><span class="pl-k">::</span>fromString(<span class="pl-s"><span class="pl-pds">'</span>User-Agent: Mozilla/5.0 (Linux; Android 4.0.4; Desire HD Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19<span class="pl-pds">'</span></span>)</span>
-<span class="pl-s1">); <span class="pl-c">//Retrieve "\Mobile_Detect" object with arbitrary http headers</span></span>
-<span class="pl-s1"><span class="pl-smi">$mobileDetect</span><span class="pl-k">-&gt;</span>isAndroidOS();</span></pre></div>
-</li>
-<li>
-<p>Call Mobile-Detect in a view</p>
-
-<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-smi">$mobileDetect</span> <span class="pl-k">=</span> <span class="pl-smi">$this</span><span class="pl-k">-&gt;</span>mobileDetect(); <span class="pl-c">//Retrieve "\Mobile_Detect" object</span></span>
-<span class="pl-s1"><span class="pl-smi">$mobileDetect</span><span class="pl-k">-&gt;</span>isMobile();</span>
-<span class="pl-s1"></span>
-<span class="pl-s1"><span class="pl-smi">$mobileDetect</span> <span class="pl-k">=</span> <span class="pl-smi">$this</span><span class="pl-k">-&gt;</span>mobileDetect(</span>
-<span class="pl-s1">    <span class="pl-c1">\Zend\Http\</span><span class="pl-c1">Headers</span><span class="pl-k">::</span>fromString(<span class="pl-s"><span class="pl-pds">'</span>User-Agent: Mozilla/5.0 (Linux; Android 4.0.4; Desire HD Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19<span class="pl-pds">'</span></span>)</span>
-<span class="pl-s1">); <span class="pl-c">//Retrieve "\Mobile_Detect" object with arbitrary http headers</span></span>
-<span class="pl-s1"><span class="pl-smi">$mobileDetect</span><span class="pl-k">-&gt;</span>isAndroidOS();</span></pre></div>
-</li>
+<li><a href="https://github.com/neilime/zf2-assets-bundle/wiki/Installation">Installation</a></li>
+<li><a href="https://github.com/neilime/zf2-assets-bundle/wiki/Use-with-Zend-Skeleton-Application">Use with Zend Skeleton Application</a></li>
+<li><a href="https://github.com/neilime/zf2-assets-bundle/wiki/Configuration">Configuration</a></li>
+<li><a href="https://github.com/neilime/zf2-assets-bundle/wiki/Custom-Js">Custom Js</a></li>
+<li><a href="https://github.com/neilime/zf2-assets-bundle/wiki/Console-tools">Console tools</a></li>
+<li><a href="https://github.com/neilime/zf2-assets-bundle/wiki/FAQ">FAQ</a></li>
+<li><a href="http://neilime.github.io/zf2-assets-bundle/phpdoc/">PHP Doc</a></li>
+<li><a href="http://neilime.github.io/zf2-assets-bundle/coverage/">Code Coverage</a></li>
 </ol>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/neilime/zf2-mobile-detect">ZF Mobile-Detect</a> is maintained by <a href="https://github.com/neilime">neilime</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
+</article>
     </section>
 
   
