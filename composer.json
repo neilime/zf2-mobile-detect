@@ -23,9 +23,8 @@
     },
     "require-dev": {
         "zendframework/zend-test": "3.*.*",
-        "phpunit/phpunit": "4.*.*",
-        "satooshi/php-coveralls": "1.*.*",
-        "phpdocumentor/phpdocumentor": "2.*.*"
+        "phpunit/phpunit": "5.*.*",
+        "satooshi/php-coveralls": "1.*.*"
     },
     "autoload": {
         "psr-4": {
