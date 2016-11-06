@@ -1,27 +1,18 @@
 language: php
-
 matrix:
   include:
   - php: '5.6'
     env:
     - EXECUTE_AFTER_SCRIPT=true
   - php: '7.0'
-
 addons:
   apt:
     packages:
     - graphviz
-
-env:
-  global:
-  - secure: eTtVtFTk5+jdkUUIa9HWWTprwvq5y+mxeQ3AbJc54AcKyTtPE7H9ywgsVCEp+n0z9t12bW5bgsCTMvFny1Vq/yYb1SIMUu37kCGohrGc2fgFIqanVHnetNTRjj4h5zZxll9GsaA5GEd4Pnn/LMbAGdO8AehDhbz7DIY6ZLuIA74=
-
 sudo: false
-
 cache:
   directories:
   - "$HOME/.composer/cache"
-
 before_install:
 - mkdir -p ~/.composer
 - cp .travis.composer.json ~/.composer/config.json
@@ -30,17 +21,19 @@ before_install:
 - pear channel-discover pear.phpdoc.org
 - pear install phpdoc/phpDocumentor
 - phpenv rehash
-
 before_script:
 - mkdir -p build/{logs,coverage,phpdoc}
-
 script:
 - cd tests
 - phpunit -d max_execution_time=0 --coverage-text --coverage-clover ../build/logs/clover.xml
   --coverage-html ../build/coverage/
 - cd ..
-
 after_script:
-- if [[ $EXECUTE_AFTER_SCRIPT == 'true' ]]; then php vendor/bin/coveralls --verbose --config;fi
-- if [[ $EXECUTE_AFTER_SCRIPT == 'true' ]]; then phpdoc -d "./src" -t "./build/phpdoc" --template="responsive-twig";fi
+- if [[ $EXECUTE_AFTER_SCRIPT == 'true' ]]; then php vendor/bin/coveralls --verbose
+  --config;fi
+- if [[ $EXECUTE_AFTER_SCRIPT == 'true' ]]; then phpdoc -d "./src" -t "./build/phpdoc"
+  --template="responsive-twig";fi
 - if [[ $EXECUTE_AFTER_SCRIPT == 'true' ]]; then bash <(curl -s https://gist.githubusercontent.com/neilime/769d733c52acdecea8d2548fb3aca3ff/raw/853d54289f5c449ea9af6a4d8ca92e1f9fc80980/travis_ci_php_publish_build.sh);fi
+env:
+  global:
+    secure: F4d5oDfBC+lRjalp9lN8TTrHX4PmKnvyNhtGvYkboNpRQIfh1oI03hCIo74qiBKjuHZ0bee1wIuYGHLUUj/e1N9L8cLFTW502EhYqP9zLIh/GNh7/fDhmENFFt2VlYyYN3eAmYZzC5Oaqc8hiqqDmI9SUzWrOhhr7K9J0o7wuHU=
