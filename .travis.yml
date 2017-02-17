@@ -25,7 +25,7 @@ before_script:
 - mkdir -p build/{logs,coverage,phpdoc}
 script:
 - cd tests
-- phpunit -d max_execution_time=0 --coverage-text --coverage-clover ../build/logs/clover.xml
+- vendir/bin/phpunit -d max_execution_time=0 --coverage-text --coverage-clover ../build/logs/clover.xml
   --coverage-html ../build/coverage/
 - cd ..
 after_script:
