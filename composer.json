@@ -18,7 +18,7 @@
     "minimum-stability" : "stable",
     "require": {
         "php": ">=5.6",
-        "zendframework/zend-mvc": "3.*.*",
+        "zendframework/zend-mvc": "^2.7 || ^3.0",
         "mobiledetect/mobiledetectlib": "2.*.*"
     },
     "require-dev": {
