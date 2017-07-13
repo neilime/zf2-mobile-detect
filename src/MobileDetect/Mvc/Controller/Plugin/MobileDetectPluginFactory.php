@@ -2,7 +2,7 @@
 namespace Neilime\MobileDetect\Mvc\Controller\Plugin;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class MobileDetectPluginFactory implements FactoryInterface
@@ -12,7 +12,7 @@ class MobileDetectPluginFactory implements FactoryInterface
         return new MobileDetectPlugin($serviceManager->get('mobileDetect'));
     }
 
-    public function createService(ServiceLocatorInterface $serviceLocator)
+    public function createService(gtiServiceLocatorInterface $serviceLocator)
     {
         return $this->__invoke($serviceLocator);
     }
