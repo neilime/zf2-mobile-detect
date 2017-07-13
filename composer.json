@@ -19,7 +19,8 @@
     "require": {
         "php": ">=5.6",
         "zendframework/zend-mvc": "^2.7 || ^3.0",
-        "mobiledetect/mobiledetectlib": "2.*.*"
+        "mobiledetect/mobiledetectlib": "2.*.*",
+        "container-interop/container-interop": "^1.1"
     },
     "require-dev": {
         "zendframework/zend-test": "3.*.*",
