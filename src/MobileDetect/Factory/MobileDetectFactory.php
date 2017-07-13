@@ -23,6 +23,6 @@ class MobileDetectFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this($serviceLocator->getServiceLocator(), 'mobileDetect');
+        return $this($serviceLocator, 'mobileDetect');
     }
 }
