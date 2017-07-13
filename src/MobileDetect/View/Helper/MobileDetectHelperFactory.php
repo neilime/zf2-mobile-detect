@@ -2,7 +2,7 @@
 namespace Neilime\MobileDetect\View\Helper;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class MobileDetectHelperFactory implements FactoryInterface
