@@ -4,16 +4,19 @@
 
 * [MobileDetectFactory](#mobiledetectfactory)
     * [__invoke](#__invoke)
+    * [createService](#createservice)
 * [MobileDetectHelper](#mobiledetecthelper)
     * [__construct](#__construct)
     * [__invoke](#__invoke-1)
 * [MobileDetectHelperFactory](#mobiledetecthelperfactory)
     * [__invoke](#__invoke-2)
+    * [createService](#createservice-1)
 * [MobileDetectPlugin](#mobiledetectplugin)
     * [__construct](#__construct-1)
     * [__invoke](#__invoke-3)
 * [MobileDetectPluginFactory](#mobiledetectpluginfactory)
     * [__invoke](#__invoke-4)
+    * [createService](#createservice-2)
 
 ## MobileDetectFactory
 
@@ -22,15 +25,15 @@ Class MobileDetectFactory
 
 
 * Full name: \Neilime\MobileDetect\Factory\MobileDetectFactory
-* This class implements: \Zend\ServiceManager\FActory\FactoryInterface
+* This class implements: \Zend\ServiceManager\FactoryInterface
 
 
 ### __invoke
 
-
+{@inheritDoc}
 
 ```php
-MobileDetectFactory::__invoke( \Interop\Container\ContainerInterface $serviceLocator, string $requestedName, array|null $options = null ): \Mobile_Detect
+MobileDetectFactory::__invoke( \Interop\Container\ContainerInterface $container,  $requestedName, array $options = null )
 ```
 
 
@@ -40,9 +43,31 @@ MobileDetectFactory::__invoke( \Interop\Container\ContainerInterface $serviceLoc
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$serviceLocator` | **\Interop\Container\ContainerInterface** |  |
-| `$requestedName` | **string** |  |
-| `$options` | **array&#124;null** |  |
+| `$container` | **\Interop\Container\ContainerInterface** |  |
+| `$requestedName` | **** |  |
+| `$options` | **array** |  |
+
+
+
+
+---
+
+### createService
+
+{@inheritDoc}
+
+```php
+MobileDetectFactory::createService( \Zend\ServiceManager\ServiceLocatorInterface $serviceLocator )
+```
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$serviceLocator` | **\Zend\ServiceManager\ServiceLocatorInterface** |  |
 
 
 
@@ -110,15 +135,15 @@ MobileDetectHelper::__invoke( \Zend\Http\Headers $oHeaders = null ): \Mobile_Det
 
 
 * Full name: \Neilime\MobileDetect\View\Helper\MobileDetectHelperFactory
-* This class implements: \Zend\ServiceManager\Factory\FactoryInterface
+* This class implements: \Zend\ServiceManager\FactoryInterface
 
 
 ### __invoke
 
-
+{@inheritDoc}
 
 ```php
-MobileDetectHelperFactory::__invoke( \Interop\Container\ContainerInterface $serviceLocator,  $requestedName, array $options = null )
+MobileDetectHelperFactory::__invoke( \Interop\Container\ContainerInterface $container,  $requestedName, array $options = null )
 ```
 
 
@@ -128,9 +153,31 @@ MobileDetectHelperFactory::__invoke( \Interop\Container\ContainerInterface $serv
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$serviceLocator` | **\Interop\Container\ContainerInterface** |  |
+| `$container` | **\Interop\Container\ContainerInterface** |  |
 | `$requestedName` | **** |  |
 | `$options` | **array** |  |
+
+
+
+
+---
+
+### createService
+
+{@inheritDoc}
+
+```php
+MobileDetectHelperFactory::createService( \Zend\ServiceManager\ServiceLocatorInterface $serviceLocator )
+```
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$serviceLocator` | **\Zend\ServiceManager\ServiceLocatorInterface** |  |
 
 
 
@@ -198,15 +245,15 @@ MobileDetectPlugin::__invoke( \Zend\Http\Headers $oHeaders = null ): \Mobile_Det
 
 
 * Full name: \Neilime\MobileDetect\Mvc\Controller\Plugin\MobileDetectPluginFactory
-* This class implements: \Zend\ServiceManager\Factory\FactoryInterface
+* This class implements: \Zend\ServiceManager\FactoryInterface
 
 
 ### __invoke
 
-
+{@inheritDoc}
 
 ```php
-MobileDetectPluginFactory::__invoke( \Interop\Container\ContainerInterface $serviceManager,  $requestedName, array $options = null )
+MobileDetectPluginFactory::__invoke( \Interop\Container\ContainerInterface $container,  $requestedName, array $options = null )
 ```
 
 
@@ -216,9 +263,31 @@ MobileDetectPluginFactory::__invoke( \Interop\Container\ContainerInterface $serv
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$serviceManager` | **\Interop\Container\ContainerInterface** |  |
+| `$container` | **\Interop\Container\ContainerInterface** |  |
 | `$requestedName` | **** |  |
 | `$options` | **array** |  |
+
+
+
+
+---
+
+### createService
+
+{@inheritDoc}
+
+```php
+MobileDetectPluginFactory::createService( \Zend\ServiceManager\ServiceLocatorInterface $serviceLocator )
+```
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$serviceLocator` | **\Zend\ServiceManager\ServiceLocatorInterface** |  |
 
 
 
@@ -228,4 +297,4 @@ MobileDetectPluginFactory::__invoke( \Interop\Container\ContainerInterface $serv
 
 
 --------
-> This document was automatically generated from source code comments on 2017-02-18 using [phpDocumentor](http://www.phpdoc.org/) and [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public)
+> This document was automatically generated from source code comments on 2017-08-19 using [phpDocumentor](http://www.phpdoc.org/) and [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public)
