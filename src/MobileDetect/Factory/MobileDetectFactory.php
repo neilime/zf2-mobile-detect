@@ -1,8 +1,9 @@
 <?php
 namespace Neilime\MobileDetect\Factory;
 
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FActory\FactoryInterface;
 
 /**
  * Class MobileDetectFactory
@@ -11,13 +12,17 @@ use Zend\ServiceManager\FActory\FactoryInterface;
 class MobileDetectFactory implements FactoryInterface
 {
     /**
-     * @param ContainerInterface $serviceLocator
-     * @param string $requestedName
-     * @param array|null $options
-     * @return \Mobile_Detect
+     * {@inheritDoc}
      */
-    public function __invoke(ContainerInterface $serviceLocator, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         return new \Mobile_Detect();
+    }
+    /**
+     * {@inheritDoc}
+     */
+    public function createService(ServiceLocatorInterface $serviceLocator)
+    {
+        return $this($serviceLocator, 'mobileDetect');
     }
 }

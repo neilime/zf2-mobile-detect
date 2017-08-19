@@ -15,9 +15,4 @@ return [
             'mobileDetect' => 'Neilime\MobileDetect\View\Helper\MobileDetectHelperFactory',
         ],
     ],
-    'controllers'        => [
-        'abstract_factories' => [
-            \Zend\Mvc\Controller\LazyControllerAbstractFactory::class,
-        ],
-    ],
 ];
